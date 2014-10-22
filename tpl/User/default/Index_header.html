@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>var SITEURL='';</script>
+<title> {ApiYing::C('site_title')} {ApiYing::C('site_name')}</title>
+<link href="{ApiYing::RES}/css/style.css" rel="stylesheet" type="text/css" />
+<link href="{ApiYing::RES}/css/stylet.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{ApiYing::RES}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{ApiYing::RES}/js/main.js"></script>
+</head>
+<body>
+<div id="herder" >
+	<div id="top">
+		<img src="{ApiYing::RES}/images/logo.png" />
+		<a href="/" >首页</a>
+		<a href="{ApiYing::U('Home/Index/fc')}" >功能介绍</a>
+		<a href="{ApiYing::U('Home/Index/about')}" >关于我们</a>
+		<a href="{ApiYing::U('Home/Index/price')}" >资费说明</a>
+        <a href="{ApiYing::U('Home/Index/help')}" >帮助中心</a>
+		<a href="{ApiYing::U('User/Index/index')}" >管理中心</a>
+		<a class="line" ></a>
+		<div class="lgoin_info">
+			<a href="{ApiYing::U('User/Index/index')}" id="tiduser">您好：<span>{ApiYing:$Think.session.uname}</span></a>
+			<a href="{ApiYing::U('System/Admin/logout')}" class="a1" id="quit">退出</a>
+		</div>
+        
+	</div>
+</div>
+<div id="Frame" class="shadow">
+	<div id="nav">  
+		<ul class="ul">
+        <?php if(!empty($_GET['id'])){ ?>
+			<li><strong>{ApiYing:$wecha.wxname}</strong><img src="{ApiYing::RES}/images/vip.png" /></li>
+			<li>微信号：{ApiYing:$wecha.weixin}</li>
+        <?php }else{ ?>
+        	<li><strong>用户：</strong><strong style="color:#CC3300;" >{ApiYing:$Think.session.uname}</strong></li>
+			<!--<li><strong>等级：</strong><strong style="color:#CC3300;" >VIP<php>if($_SESSION['gid']>1){echo $_SESSION['gid']-1;}else{echo 0;}</php></strong></li>-->
+			<li><strong>等级：</strong><strong style="color:#CC3300;" >{ApiYing:$userinfo.name}(VIP<php>if($_SESSION['gid']>1){echo $_SESSION['gid']-1;}else{echo 0;}</php>)</strong></li>
+        <?php } ?>
+		</ul>
+		<ul class="ul2" >
+			<li>VIP有效时间：<if condition="$_SESSION['viptime'] neq 0">{ApiYing:$thisUser.viptime|date="Y-m-d",###}<else/>vip0不限时间</if></li>
+			<li>图文自定义：{ApiYing:$thisUser.diynum}/{ApiYing:$userinfo.diynum}</li>
+		</ul>
+		<ul>
+			<li>活动创建数：{ApiYing:$thisUser.activitynum}/{ApiYing:$userinfo.activitynum}</li>
+			<li>请求数：{ApiYing:$thisUser.connectnum}/{ApiYing:$userinfo.connectnum}</li>
+		</ul>
+		<ul>
+			<li>请求数剩余：<php>echo ($userinfo['connectnum']-$_SESSION['connectnum']);</php></li>
+			<li>已使用：<php>echo $_SESSION['diynum'];</php></li>
+		</ul>
+		<ul>
+			<li>当月赠送请求数：{ApiYing:$userinfo.connectnum}</li>
+			<li>当月剩余请求数：<php>echo $userinfo['connectnum']-$_SESSION['connectnum'];</php></li>
+		</ul>
+	</div>
+    <div id="floatline"></div>
+	<div id="Menu">
+		<div class="top">
+             <img style="display:none;" src="{ApiYing::RES}/images/TwoMenu-ico-006.png" />
+            <a>管理平台</a>
+            <span>
+            	<if condition="MODULE_NAME eq 'useredit'">- 修改密码</if>
+                <if condition="MODULE_NAME eq 'index'">- 我的公众号</if>
+                <if condition="MODULE_NAME eq 'add'">- 添加公众号</if>
+            </span>
+		</div>
+		<div class="TwoMenu">
+			<a href="#" >
+            	<img src="{ApiYing::RES}/images/TwoMenu-ico-06.png" />
+            	<span>管理</span>
+            </a>
+			<div id="TwoMenu-01" style="display:block;" >
+            	<img src="{ApiYing::RES}/images/TwoMenu-ico-006.png" /><a class="a">管理</a>
+            </div>
+			<?php for($i=1;$i<6;$i++){?>
+            	<a ></a>
+            <?php } ?>
+		</div>
+		<div class="ThreeMenu">
+        	<div class="contab" style="display:block;" >
+			 	<a href="{ApiYing::U('Index/index')}" class="Red" >
+                    <img src="{ApiYing::RES}/images/1-1.png" /><span>公众账号</span>
+                </a>
+                <a href="{ApiYing::U('Index/data')}" class="Highland" >
+                	<img src="{ApiYing::RES}/images/TwoMenu-ico-03.png" /><span>用户中心</span>
+                </a>               
+                <a href="{ApiYing::U('Index/add')}" class="Navy" >
+                    <img src="{ApiYing::RES}/images/1-2.png" /><span>添加公号</span>
+                </a>
+                <a href="index.php?g=Home&m=Index&a=help" class="DarkGreen" >
+                    <img src="{ApiYing::RES}/images/3-2.png" /><span>帮助文档</span>
+                </a>
+            </div>
+		</div>
+	</div>
+	<div id="Content" >
+	</div>

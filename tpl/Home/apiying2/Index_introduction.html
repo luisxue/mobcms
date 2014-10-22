@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>{ApiYing:$one_article_rel['title']}</title>
+<meta name="keywords" content="{ApiYing:$one_article_rel['keywords']}"/>
+<meta name="description" content="{ApiYing:$one_article_rel['description']}"/>
+<include file="Public:header"/>
+<link rel="stylesheet" type="text/css" href="{ApiYing::RES}/css/indexbanner.css"/>
+<style type="text/css">
+.case_info{
+	padding:20px;
+}
+.case_info img{
+	display:block;
+	margin:0 auto;	
+}
+.case_info p{
+	text-indent:26px;
+}
+</style>
+<div class="main">	
+	<div class="wxgzbox">				
+		<!--我们的用户开始-->
+		<div class="weixinapps" style="border-top:none;"> 			
+				<ul class="case-nav left" id="nav_lis">				
+					<volist name="all_article" id="val" >  								
+						<if condition="$val['id'] eq $article_id"> 					
+							<li class="hover"><a href="{ApiYing::U('Home/Index/introduction',array('id'=>$val['id']))}">{ApiYing:$val.titleb}</a></li>
+						<else />
+							<li><a href="{ApiYing::U('Home/Index/introduction',array('id'=>$val['id']))}">{ApiYing:$val.titleb}</a></li>
+						</if>
+					</volist>	
+				</ul>
+				<div id="nav_uls" style="overflow:hidden;">	
+					<div class="case_info">
+						{ApiYing:$one_article_rel['content']}		
+					</div>				
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+			</div>
+		<!--我们的用户结束-->	
+	</div>
+</div>
+<include file="Public:footer"/>

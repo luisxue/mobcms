@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title><if condition="$item_id neq ''">{ApiYing:$cname}行业{ApiYing:$one_case_rel.name}微信营销案例<else />{ApiYing:$cname}行业微信营销案例 					
+</if></title>
+<meta name="keywords" content="<if condition="$item_id neq ''">{ApiYing:$one_case_rel.name}微信营销案例</if>,{ApiYing:$cname}微网站,{ApiYing:$cname}行业微信案例,{ApiYing:$cname}行业微信营销"/>
+<meta name="description" content="<if condition="$item_id neq ''">{ApiYing:$one_case_rel.name}微信营销案例,{ApiYing:$one_case_rel.name}微信营销解决方案<else />微信后台营销管理系统为您提供国内最全的{ApiYing:$cname}行业微信营销案例,{ApiYing:$cname}微信营销解决方案</if> "/>
+<include file="Public:header"/>
+<link rel="stylesheet" type="text/css" href="{ApiYing::RES}/css/indexbanner.css"/>
+<style type="text/css">
+
+</style>
+<div class="main">	
+	<div class="wxgzbox">				
+		<!--我们的用户开始-->
+		<div class="weixinapps" style="border-top:none;"> 			
+				<ul class="case-nav left" id="nav_lis">				
+					<volist name="cates" id="val" >  								
+						<if condition="$val['id'] eq $cid"> 					
+							<li class="hover"><a href="{ApiYing::U('Home/Index/cases',array('cid'=>$val['id']))}">{ApiYing:$val.name}</a></li>
+						<else />
+							<li><a href="{ApiYing::U('Home/Index/cases',array('cid'=>$val['id']))}">{ApiYing:$val.name}</a></li>
+						</if>
+					</volist>	
+				</ul>
+				<div id="nav_uls" style="overflow:hidden;">
+					<ul class="wm_case_list">
+						
+						<volist name="case_rel" id="val" > 
+						
+							<if condition="$val['id'] eq $item_id"> 					
+								<li class="case_item hover">
+									<a href="{ApiYing::U('Home/Index/cases',array('id'=>$val['id'],'cid'=>$cid))}">
+										<div class="case_img">
+											<img  src="http://www.apiying.com/{ApiYing:$val.img}"/>
+										</div>
+										<span>{ApiYing:$val.name}</span>								
+									</a>
+								</li>
+							<else />
+								<li class="case_item">
+									<a href="{ApiYing::U('Home/Index/cases',array('id'=>$val['id'],'cid'=>$cid))}">
+										<div class="case_img">
+											<img  src="{ApiYing:$val.img}"/>
+										</div>
+										<span>{ApiYing:$val.name}</span>								
+									</a>
+								</li>
+							</if>				
+						</volist>
+					</ul>
+					
+					<div class="case_info">
+						<if condition="$item_id eq ''"> 
+							<volist name="case_rel" id="val" > 
+								<div class="case_info_list">
+									<h4>{ApiYing:$val.name}微信营销 微网站案例</h4>
+									<p>{ApiYing:$val.content}</p>
+								</div>								
+							</volist>	
+						<else />
+							<div class="case_info_list">
+									<h4>{ApiYing:$cname}行业 {ApiYing:$one_case_rel.name}微信营销 微网站案例</h4>
+									<p>{ApiYing:$one_case_rel.content}</p>
+							</div>								
+						</if>				
+					</div>				
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+			</div>
+		<!--我们的用户结束-->	
+	</div>
+</div>
+<include file="Public:footer"/>

@@ -1,0 +1,108 @@
+[ 2014-10-20T11:59:48+08:00 ] 127.0.0.1 /index.php?g=User&m=Token_open&a=add&token=seeebp1390203728&id=4&r=0.20605531497858465
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\weidcms\Lib\Core\Action.class.php 第 206 行.
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.002778s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.003334s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.004381s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `tp_wxuser` WHERE ( `token` = 'seeebp1390203728' ) AND ( `uid` = 2 ) LIMIT 1   [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `tp_function` [ RunTime:0.003342s ]
+SQL: SELECT * FROM `tp_function` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.003158s ]
+SQL: DELETE FROM `tp_token_open` WHERE ( `uid` <> '2' ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000406s ]
+SQL: SELECT * FROM `tp_token_open` WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) LIMIT 1   [ RunTime:0.000369s ]
+SQL: UPDATE `tp_token_open` SET `queryname`=',langdu' WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000332s ]
+
+[ 2014-10-20T11:59:54+08:00 ] 127.0.0.1 /index.php?g=User&m=Token_open&a=add&token=seeebp1390203728&id=1&r=0.2407163919415325
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\weidcms\Lib\Core\Action.class.php 第 206 行.
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.003089s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.004185s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.003349s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `tp_wxuser` WHERE ( `token` = 'seeebp1390203728' ) AND ( `uid` = 2 ) LIMIT 1   [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `tp_function` [ RunTime:0.003022s ]
+SQL: SELECT * FROM `tp_function` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.003260s ]
+SQL: DELETE FROM `tp_token_open` WHERE ( `uid` <> '2' ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000851s ]
+SQL: SELECT * FROM `tp_token_open` WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) LIMIT 1   [ RunTime:0.000891s ]
+SQL: UPDATE `tp_token_open` SET `queryname`=',tianqi' WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000526s ]
+
+[ 2014-10-20T11:59:55+08:00 ] 127.0.0.1 /index.php?g=User&m=Token_open&a=add&token=seeebp1390203728&id=2&r=0.5037361790891737
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001612s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\weidcms\Lib\Core\Action.class.php 第 206 行.
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.005048s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.003904s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.003615s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `tp_wxuser` WHERE ( `token` = 'seeebp1390203728' ) AND ( `uid` = 2 ) LIMIT 1   [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `tp_function` [ RunTime:0.003309s ]
+SQL: SELECT * FROM `tp_function` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.002735s ]
+SQL: DELETE FROM `tp_token_open` WHERE ( `uid` <> '2' ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000660s ]
+SQL: SELECT * FROM `tp_token_open` WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) LIMIT 1   [ RunTime:0.000640s ]
+SQL: UPDATE `tp_token_open` SET `queryname`=',qiushi' WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000660s ]
+
+[ 2014-10-20T11:59:59+08:00 ] 127.0.0.1 /index.php?g=User&m=Token_open&a=del&token=seeebp1390203728&id=2&r=0.6001352607272565
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\weidcms\Lib\Core\Action.class.php 第 206 行.
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.005071s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.004167s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.005421s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `tp_wxuser` WHERE ( `token` = 'seeebp1390203728' ) AND ( `uid` = 2 ) LIMIT 1   [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `tp_function` [ RunTime:0.004930s ]
+SQL: SELECT * FROM `tp_function` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.004949s ]
+SQL: SELECT * FROM `tp_token_open` WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) LIMIT 1   [ RunTime:0.000527s ]
+SQL: DELETE FROM `tp_token_open` WHERE ( `uid` <> '2' ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000444s ]
+SQL: UPDATE `tp_token_open` SET `queryname`='' WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000379s ]
+
+[ 2014-10-20T12:00:00+08:00 ] 127.0.0.1 /index.php?g=User&m=Token_open&a=add&token=seeebp1390203728&id=2&r=0.28257177444174886
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\weidcms\Lib\Core\Action.class.php 第 206 行.
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.003490s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.003927s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001901s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.003631s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `tp_wxuser` WHERE ( `token` = 'seeebp1390203728' ) AND ( `uid` = 2 ) LIMIT 1   [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `tp_function` [ RunTime:0.004100s ]
+SQL: SELECT * FROM `tp_function` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.003599s ]
+SQL: DELETE FROM `tp_token_open` WHERE ( `uid` <> '2' ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000450s ]
+SQL: SELECT * FROM `tp_token_open` WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) LIMIT 1   [ RunTime:0.000379s ]
+SQL: UPDATE `tp_token_open` SET `queryname`=',qiushi' WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000328s ]
+
+[ 2014-10-20T12:00:02+08:00 ] 127.0.0.1 /index.php?g=User&m=Token_open&a=del&token=seeebp1390203728&id=2&r=0.4274427341297269
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\weidcms\Lib\Core\Action.class.php 第 206 行.
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.018177s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.003837s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.003364s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `tp_wxuser` WHERE ( `token` = 'seeebp1390203728' ) AND ( `uid` = 2 ) LIMIT 1   [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `tp_function` [ RunTime:0.003491s ]
+SQL: SELECT * FROM `tp_function` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.003254s ]
+SQL: SELECT * FROM `tp_token_open` WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) LIMIT 1   [ RunTime:0.000712s ]
+SQL: DELETE FROM `tp_token_open` WHERE ( `uid` <> '2' ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000618s ]
+SQL: UPDATE `tp_token_open` SET `queryname`='' WHERE ( `uid` = 2 ) AND ( `token` = 'seeebp1390203728' ) [ RunTime:0.000571s ]
+

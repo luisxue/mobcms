@@ -1,0 +1,26 @@
+<div class="main">
+	<div class="p_content">
+		<h1>{ApiYing:$product.name}</h1>
+		<div class="p_con">
+			<img src="{ApiYing:$product.logourl}" alt="{ApiYing:$product.name}"/>
+            <br />
+{ApiYing:$product.intro}</div>
+		<div class="p_mod p_seller_info p_tips ts2">
+			<a href="{ApiYing::U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}">
+				查看商品详情
+				<span class="gt"></span>
+			</a>
+		</div>
+	</div>
+	<div class="p_buy clearfix fixed_b">
+		<span class="p_price">
+			￥{ApiYing:$product.price}
+		</span>
+		<a href="{ApiYing::U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}" class="p_btn_buy">
+			<span class="ts1">去购买</span>
+		</a>
+	</div>
+</div>
+<include file="Product:header"/>
+</body>
+</html>

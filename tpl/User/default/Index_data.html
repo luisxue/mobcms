@@ -1,0 +1,62 @@
+<include file="Index:header"/>
+<div class="content" style="width:920px; background:none; margin-left:275px; border:none; margin-bottom:30px;" >
+          <div class="cLineB">
+          	<span style="float:right;">
+				<a class="btnGreens" href="/index.php?g=User&m=Index&a=useredit">修改密码</a>
+			</span>
+          	<h4>用户信息<span class="FAQ"></span></h4>
+		  </div>
+          <form method="post" action="{ApiYing::U('Index/usersave')}" enctype="multipart/form-data">
+          <div class="msgWrap">
+            <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
+             
+             <tbody>
+				<tr>
+                	<th>用户名：</th>
+                	<td>{ApiYing:$info.username}</td>
+                </tr>
+				<tr>
+                	<th>邮箱：</th>
+                	<td>{ApiYing:$info.email}</td>
+                </tr>
+				<tr>
+                	<th>注册时间：</th>
+                	<td>{ApiYing:$info.createtime|date='Y-m-d H:i:s',###}</td>
+                </tr>
+				<tr>
+                	<th>最后登录时间：</th>
+                	<td>{ApiYing:$info.lasttime|date='Y-m-d H:i:s',###}</td>
+                </tr>
+				<tr>
+                	<th>注册IP：</th>
+                	<td>{ApiYing:$info.createip}</td>
+                </tr>
+				<tr>
+                	<th>最后登录IP:</th>
+                	<td>{ApiYing:$info.lastip}</td>
+                </tr>
+				<tr>
+                	<th>最后登录IP:</th>
+                	<td>{ApiYing:$info.lastip}</td>
+                </tr>
+				<tr>
+                	<th>账户余额:</th>
+                	<td>{ApiYing:$info.money}</td>
+                </tr>
+				<tr>
+                	<th>Vip到期日:</th>
+                	<td>{ApiYing:$info.viptime|date='Y-m-d H:i:s',###}</td>
+                </tr>				
+              </tbody>
+            </table>
+            
+          </div>
+          </form>
+          
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+  </div>
+  <!--底部-->
+  	</div>

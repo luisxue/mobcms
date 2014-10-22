@@ -1,0 +1,1 @@
+<?php	return array ( 0 => array ( 'id' => '1', 'name' => '阿里微微', 'url' => 'http://www.alivv.net', 'status' => '1', ), 1 => array ( 'id' => '2', 'name' => '阿里云链', 'url' => 'http://www.alivv.com', 'status' => '1', ), ); ?>

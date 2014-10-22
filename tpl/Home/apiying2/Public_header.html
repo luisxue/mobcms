@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="{ApiYing::RES}/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="{ApiYing::RES}/css/index.css"/>
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="{ApiYing::RES}/css/ie6.css"/>
+<![endif]-->
+<script type="text/javascript">window.onerror=function(){return true;}</script>
+<script type="text/javascript" src="{ApiYing::RES}/js/lang.js"></script>
+<script type="text/javascript" src="{ApiYing::RES}/js/config.js"></script>
+<script type="text/javascript" src="{ApiYing::RES}/js/jquery.js"></script>
+<script type="text/javascript" src="{ApiYing::RES}/js/common.js"></script>
+<script type="text/javascript" src="{ApiYing::RES}/js/page.js"></script>
+<script type="text/javascript" src="{ApiYing::RES}/js/jquery.lazyload.js"></script>
+<script type="text/javascript">
+GoMobile('');
+var searchid = 5;
+</script>
+</head>
+<body>
+<div id="herder" >
+	<div id="top">
+		<img src="{ApiYing::RES}/images/logo.png" alt="微信营销后台管理系统" />		
+		<a href="/" <if condition="(ACTION_NAME eq 'index') and (GROUP_NAME eq 'Home')">class="menuon"</if>>首页</a>
+		<a href="{ApiYing::U('Home/Index/introduction',array('id'=>4))}" <eq name="ACTION_NAME" value="introduction">class="menuon"</eq>>功能介绍</a>
+		<a href="{ApiYing::U('Home/Index/cases',array('cid'=>6))}" <eq name="ACTION_NAME" value="cases">class="menuon"</eq>>客户案例</a>
+		<a href="{ApiYing::U('Home/Index/about')}" <eq name="ACTION_NAME" value="about">class="menuon"</eq>>关于我们</a>
+		<!--
+		<a href="Home-Index-price.html" <eq name="ACTION_NAME" value="price">class="menuon"</eq>>资费说明</a>
+		-->
+        <a href="{ApiYing::U('Home/Index/help')}" <eq name="ACTION_NAME" value="help">class="menuon"</eq>>帮助中心</a>
+			
+		<if condition="$_SESSION[uid]!=false">
+			<a href="{ApiYing::U('User/Index/index')}" >管理中心</a>
+		</if>				
+		<a class="line" ></a>
+      	<div class="lgoin_info">
+			<if condition="$_SESSION[uid]==false">				
+				<a href="{ApiYing::U('Users/login')}">登录</a>
+				<a href="{ApiYing::U('Users/register')}">注册</a>
+				
+				<else/>
+				<a href="{ApiYing::U('User/Index/index')}" id="tiduser">您好：<span>{ApiYing:$Think.session.uname}</span></a>
+				<a href="{ApiYing::U('System/Admin/logout')}" class="a1" id="quit">退出</a>
+			</if>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+
+<!--主体-->
+<section class="c_list">
+	<h1><if condition="$parentid neq 0">{ApiYing:$thisCat.name}</if>全部分类：</h1>
+	<volist name="cats" id="hostlist"> 
+			<dl>
+		<dt>
+			<a href="<if condition="$hostlist['parentid'] eq 0">{ApiYing::U('Product/products',array('token'=>$_GET['token'],'catid'=>$hostlist['id'],'wecha_id'=>$wecha_id,'dining'=>$isDining))}<else/>{ApiYing::U('Product/products',array('token'=>$_GET['token'],'catid'=>$hostlist['id'],'wecha_id'=>$wecha_id))}</if>">
+				{ApiYing:$hostlist.name}
+				<i></i>
+			</a>
+		</dt>
+	</dl>
+	</volist> 
+		</section>
+<include file="Product:header"/>
+</body>
+</html>
